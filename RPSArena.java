@@ -1,4 +1,3 @@
-package lab8.src;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -58,19 +57,19 @@ public class RPSArena
 	public Contestant getContestant(String key)
 	{
 		// TODO: implement this.
-		if (key == "GEO") {
+		if (key.equals("GEO")) {
 			return Contestant.GEORGE;
 		}
 
-		else if (key == "JIL") {
+		else if (key.equals("JIL")) {
 			return Contestant.JILL;
 		}
 
-		else if (key == "MAT") {
+		else if (key.equals("MAT")) {
 			return Contestant.MATTHEW;
 		}
 
-		else if (key == "BET") {
+		else if (key.equals("BET")) {
 			return Contestant.BETTY;
 		}
 
@@ -117,6 +116,7 @@ public class RPSArena
 			if (strg.getValue().getChoice() == choice) {
 				ret += String.format("%s - %s: contestant from %s throwing %s\n", strg.getKey(), strg.getValue().name().toLowerCase(), 
 						strg.getValue().getRegion(), strg.getValue().getChoice());
+				
 			}
 
 		return ret;
@@ -143,12 +143,12 @@ public class RPSArena
 		HandChoice choice2 = contestantB.getChoice();
 
 		// Check to see if ContestantA's choice type wins against ContestantB's:
-		if (choice2.winsAgainst() == choice1) {
+		if (choice1.winsAgainst() == choice2) {
 			return contestantA;
 		}
 
 		// Check to see if ContestantB's choice type wins against ContestantA's:
-		else if (choice1.winsAgainst() == choice2) {
+		else if (choice2.winsAgainst() == choice1) {
 			return contestantB;
 		}
 

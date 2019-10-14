@@ -1,4 +1,4 @@
-package lab8.src;
+import java.util.LinkedHashMap;
 
 /**
  * Lab 
@@ -22,7 +22,7 @@ public class RPSArenaTest {
     public static void initialize() throws AssertException
     {
     	// TODO: implement.
-    	
+    	arena = new RPSArena();
     }
     
     /**
@@ -30,13 +30,16 @@ public class RPSArenaTest {
      */
     public void testContestantList() throws AssertException {
     	// TODO: implement.
+    	
     }
 
     /**
      * Tests getting the abbreviations.
      */
     public void testContestantAbbreviations() throws AssertException {
-    	// TODO: implement.
+    	// TODO: implement. 	
+    	Assert.assertEquals("[GEO, JIL, MAT, BET]", arena.getContestantAbbreivations().toString());
+    	
     }
     
     /**
@@ -44,6 +47,7 @@ public class RPSArenaTest {
      */
     public void testGetContestantExists() throws AssertException {
     	// TODO: implement.
+    	Assert.assertEquals(Contestant.GEORGE, arena.getContestant("GEO"));
     }
     
     /**
@@ -52,6 +56,7 @@ public class RPSArenaTest {
      */
     public void testGetContestantDoesNotExist() throws AssertException {
     	// TODO: implement.
+    	Assert.assertNull(arena.getContestant("BOW"));
     }
     
     /**
@@ -60,6 +65,7 @@ public class RPSArenaTest {
      */
     public void testContestantBattleTie() throws AssertException {
     	// TODO: implement.
+    	Assert.assertNull(RPSArena.battleContestants(Contestant.GEORGE, Contestant.JILL));
     }
     
     /**
@@ -67,6 +73,8 @@ public class RPSArenaTest {
      */
     public void testContestantBattleGeorgeWins() throws AssertException {
     	// TODO: implement.
+    	Assert.assertEquals(Contestant.GEORGE, RPSArena.battleContestants(Contestant.GEORGE, Contestant.MATTHEW));
+    	
     }
     
     /**
@@ -74,5 +82,6 @@ public class RPSArenaTest {
      */
     public void testContestantBattleBettyWins() throws AssertException {
     	// TODO: implement.
+    	Assert.assertEquals(Contestant.BETTY, RPSArena.battleContestants(Contestant.JILL, Contestant.BETTY));
     }
 }

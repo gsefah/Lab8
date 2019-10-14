@@ -1,4 +1,4 @@
-package lab8.src;
+
 
 /**
  * Lab 8
@@ -43,6 +43,6 @@ public class ContestantInfoTest
     public void contestantInfoToStringTest() throws AssertException
     {
     	// TODO: implement.
-    	Assert.assertEquals("contestant from south throwing rock", info.toString());
+    	Assert.assertEquals("contestant from south throwing rock", info.toString().toLowerCase());
     }
 }

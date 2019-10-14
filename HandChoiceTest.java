@@ -1,4 +1,4 @@
-package lab8.src;
+
 
 /**
  * Lab 8
@@ -47,8 +47,8 @@ public class HandChoiceTest
     public void handChoiceToStringTest() throws AssertException
     {
     	// TODO: implement.
-    	Assert.assertEquals("rock", HandChoice.ROCK.toString());
-        Assert.assertEquals("paper", HandChoice.PAPER.toString());
-        Assert.assertEquals("scissors", HandChoice.SCISSORS.toString());
+    	Assert.assertEquals("rock", HandChoice.ROCK.toString().toLowerCase());
+        Assert.assertEquals("paper", HandChoice.PAPER.toString().toLowerCase());
+        Assert.assertEquals("scissors", HandChoice.SCISSORS.toString().toLowerCase());
     }
 }

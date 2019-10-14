@@ -1,4 +1,4 @@
-package lab8.src;
+
 
 import java.util.HashMap;
 
@@ -69,6 +69,6 @@ public enum HandChoice
     public String toString()
     {
         // TODO: implement this.
-    	return name().toString();
+    	return name().toString().toLowerCase();
     }
 }

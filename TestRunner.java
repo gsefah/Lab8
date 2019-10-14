@@ -1,4 +1,3 @@
-package lab8.src;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
