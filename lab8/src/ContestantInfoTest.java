@@ -23,6 +23,7 @@ public class ContestantInfoTest
     {
     	// TODO: implement.
     	info = new ContestantInfo(Region.SOUTH, HandChoice.ROCK);
+    	
     }
 
     /**

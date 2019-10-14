@@ -10,7 +10,7 @@ package lab8.src;
  *
  */
 public class ContestantTest
-{
+{ 
     /**
      * Tests that George's region is the expected value.
      */
@@ -26,7 +26,7 @@ public class ContestantTest
     public void contestantJillGetRegionTest() throws AssertException
     {
     	// TODO: implement.
-    	Assert.assertEquals(Region.SOUTH, Contestant.MATTHEW.getRegion());
+    	Assert.assertEquals(Region.SOUTH, Contestant.JILL.getRegion());
     }
 
     /**
@@ -90,9 +90,9 @@ public class ContestantTest
     public void contestantToStringTest() throws AssertException
     {
     	// TODO: implement.
-    	Assert.assertEquals("george: contestant  from  north  throwing  rock", Contestant.JILL.toString());
+    	Assert.assertEquals("george: contestant  from  north  throwing  rock", Contestant.GEORGE.toString());
     	Assert.assertEquals("jill: contestant  from  south  throwing  rock", Contestant.JILL.toString());
-    	Assert.assertEquals("matthew: contestant  from  east  throwing  scissors", Contestant.JILL.toString());
-    	Assert.assertEquals("betty: contestant  from  west  throwing  paper", Contestant.JILL.toString());
+    	Assert.assertEquals("matthew: contestant  from  east  throwing  scissors", Contestant.MATTHEW.toString());
+    	Assert.assertEquals("betty: contestant  from  west  throwing  paper", Contestant.BETTY.toString());
     }
 }
