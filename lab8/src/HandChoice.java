@@ -41,6 +41,11 @@ public enum HandChoice
     static
     {
         // TODO: implement this. You should initialize and populate (load entries into) the CHOICE_MAP.
+    	CHOICE_MAP = new HashMap<HandChoice, HandChoice>();
+    	
+    	CHOICE_MAP.put(ROCK, SCISSORS);
+    	CHOICE_MAP.put(SCISSORS, PAPER);
+    	CHOICE_MAP.put(PAPER, ROCK);
     }
 
     /**
@@ -52,6 +57,7 @@ public enum HandChoice
     public HandChoice winsAgainst()
     {
         // TODO: implement this.
+    	return CHOICE_MAP.get(this);
     }
 
     /**
@@ -63,5 +69,6 @@ public enum HandChoice
     public String toString()
     {
         // TODO: implement this.
+    	return name().toString();
     }
 }
