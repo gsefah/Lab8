@@ -40,5 +40,6 @@ public enum Region
     public String toString()
     {
     	 // TODO: implement this.
+    	return name().toLowerCase();
     }
 }
