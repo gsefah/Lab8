@@ -1,5 +1,6 @@
 package lab8.src;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -38,8 +39,13 @@ public class RPSArena
     {
         // TODO: implement this.
         // Initialize the CONTESTANT_MAP
+    	CONTESTANT_MAP = new LinkedHashMap<String, Contestant>();
         
         // Populate the CONTESTANT_MAP
+    	CONTESTANT_MAP.put("GEO", Contestant.GEORGE);
+    	CONTESTANT_MAP.put("JIL", Contestant.JILL);
+    	CONTESTANT_MAP.put("MAT", Contestant.MATTHEW);
+    	CONTESTANT_MAP.put("BET", Contestant.BETTY);	
     }
     
     /**
@@ -52,6 +58,15 @@ public class RPSArena
     public Contestant getContestant(String key)
     {
         // TODO: implement this.
+    	if () {
+    		return null;
+    	}
+    	
+    	else {
+    		return CONTESTANT_MAP.get(this);
+    	}
+    	//Assert.assertEquals(HandChoice.ROCK, HandChoice.PAPER.winsAgainst());
+    	
     }
     
     /**
